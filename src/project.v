@@ -5,7 +5,7 @@
 
 `default_nettype none
 
-module tt_8bit_prog_counter (
+module tt_um_8bit_prog_counter (
     input  logic [7:0] ui_in,    // 8 bit load val
     output logic [7:0] uo_out,   // Dedicated outputs- not used rn
     input  logic [7:0] uio_in,   // have uio_in[0] = load_e, uio_in[1] = tristate_out_enable. 2:7 unused

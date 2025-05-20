@@ -22,8 +22,8 @@ module tt_um_8bit_prog_counter (
   prog_counter counter_inst (
       .clk(clk),
       .reset(~rst_n),
-      .load_e(uio_in[1]),
-      .out_e(uio_in[2]),
+      .load_e(uio_in[0]),
+      .out_e(uio_in[1]),
       .load_val(ui_in),
       .out_data(counter_data)
   );
@@ -31,7 +31,7 @@ module tt_um_8bit_prog_counter (
   // All output pins must be assigned. If not used, assign to 0.
   //since this is an asic, we cant like assign high z if high z enable is not set
   // so i used the like in outs to assign high z,, not sure if that was the intended functionality but like it wont work otherwise u cant just drive high z lol
-  assign uio_oe  = {8{uio_in[2]}};
+  assign uio_oe  = {8{uio_in[1]}};
   assign uio_out = counter_data;
   
 
